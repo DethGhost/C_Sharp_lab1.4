@@ -187,7 +187,12 @@ namespace CSharp_Net_module1_1_4_lab
             {
                 for (int j = 0; j < computers[i].Length; j++)
                 {
-                    if (computers[i][j].Hdd > temp2.Hdd)
+                    if (i == 0 && j == 0)
+                    {
+                        temp2 = computers[i][j];
+                        continue;
+                    }
+                    if (computers[i][j].Memmory < temp2.Memmory && computers[i][j].Frequency < temp2.Frequency)
                     {
                         temp2 = computers[i][j];
                         position2[0] = i;
